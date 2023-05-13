@@ -1,17 +1,17 @@
--- Script Hub was created by notvixinity™#5160, Join our discord server: https://discord.gg/t7sXgFNmgq for support and etc.
+-- Script Hub was created by notvixinity™#9999, Join our discord server: https://discord.gg/t7sXgFNmgq for support and etc.
 -- JOIN IT
 
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "Project Valix",
+    Name = "Project™",
     LoadingTitle = "Project Valix Development",
     LoadingSubtitle = "by Developers",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
-       FileName = "ValixHub"
+       FileName = "ProjectHub"
     },
     Discord = {
        Enabled = false,
@@ -20,32 +20,36 @@ local Window = Rayfield:CreateWindow({
     },
     KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
-       Title = "Project Valix",
+       Title = "Project™",
        Subtitle = "Key System",
        Note = "Join the discord (discord.gg/t7sXgFNmgq)",
-       FileName = "ValixKey",
+       FileName = "ProjectTMKey",
        SaveKey = true,
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-       Key = "hello:))"
-    }
+       Key = "ello"
+   }
 })
 
 
 local Main = Window:CreateTab("Home") -- Title, Image
 local HomeSection = Main:CreateSection("Main Stuff")
 
-local Paragraph = Main:CreateParagraph({Title = "Project Valix", Content = "Project Valix 4.2 | Made by notvixinity™#5160"})
+local Paragraph = Main:CreateParagraph({Title = "Project™", Content = "Project Valix 4.2 | Made by notvixinity™#9999"})
 
 -- Values
-getgev().SelectedAdmin = nil
+getgenv().SelectedAdmin = nil
 
 -- Functions
-function adminstuff()
-   if getgev().SelectedAdmin == "Infinite Yield" then
+function adminshit()
+   if getgenv().SelectedAdmin == "Infinite-Yield" then
       
+      print("Executing Infinite-Yield | FE")
+      
+      wait(.2)
+
       Rayfield:Notify({
-         Title = "Project Valix",
-         Content = "Succesfully Started Executing Infinite-Yield",
+         Title = "Project™ | Executing",
+         Content = "Succesfully Started Infinite-Yield, Enjoy.",
          Duration = 6.5,
          Image = 0,
          Actions = { -- Notification Buttons
@@ -61,11 +65,15 @@ function adminstuff()
       wait(1)
       loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 
-   elseif getgev().SelectedAdmin == "Home-Brew" then
+   elseif getgenv().SelectedAdmin == "Home-Brew" then
       
+      print("Executing Home-Brew | FE")
+      
+      wait(.2)
+
       Rayfield:Notify({
-         Title = "Project Valix",
-         Content = "Succesfully Started Executing Home-Brew",
+         Title = "Project™ | Executing",
+         Content = "Succesfully Started Home-Brew, Enjoy.",
          Duration = 6.5,
          Image = 0,
          Actions = { -- Notification Buttons
@@ -80,11 +88,16 @@ function adminstuff()
 
       wait(1)
       loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Syntaxx64/HomebrewAdmin/master/Main"))()
+
+   elseif getgenv().SelectedAdmin == "Fate Admin" then
+            
+      print("Executing Fate's Admin | FE")
       
-   elseif getgev().SelectedAdmin == "Fate's Admin" then
+      wait(.2)
+
       Rayfield:Notify({
-         Title = "Project Valix",
-         Content = "Succesfully Started Executing Fate's Admin",
+         Title = "Project™ | Executing",
+         Content = "Succesfully Started Home-Brew, Enjoy.",
          Duration = 6.5,
          Image = 0,
          Actions = { -- Notification Buttons
@@ -99,9 +112,12 @@ function adminstuff()
 
       wait(1)
       loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
-   end
 
+
+   end
+   
 end
+
 
 -- Toggles + Buttons + Dropdowns
 local speedslider = Main:CreateSlider({
@@ -112,7 +128,7 @@ local speedslider = Main:CreateSlider({
    CurrentValue = 16,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(s)
-       game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
    end,
 })
 
@@ -124,19 +140,18 @@ local jumphack = Main:CreateSlider({
    CurrentValue = 50,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(s)
-       game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+      game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
    end,
 })
 
 local AdminDropdown = Main:CreateDropdown({
    Name = "Admin Selection",
-   Options = {"Infinite Yield","Home-Brew","Fate's Admin"},
-   CurrentOption = "Option 1",
+   Options = {"Infinite-Yield","Home-Brew","Fate Admin"},
+   CurrentOption = "Option",
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Option)
-      getgev().SelectedAdmin = Option
-      adminstuff()
-      print("Currently Executing"..Option)
+      getgenv().SelectedAdmin = Option
+      adminshit()
    end,
 })
 
@@ -151,7 +166,7 @@ local Button = Main:CreateButton({
    Name = "Destroy UI.",
    Callback = function()
       Rayfield:Notify({
-         Title = "Project Valix",
+         Title = "Project Project™",
          Content = "Destroying UI..",
          Duration = 6.5,
          Image = 0,
@@ -171,11 +186,14 @@ local Button = Main:CreateButton({
    end,
 })
 
+print("This Script Hub was Created By notvixinity™#9999 on discord, NotVixinity on Youtube")
+
+
 
 local Credits = Window:CreateTab("Credits") -- Title, Image
-local AHomeSection = Credits:CreateSection("Credits Stuff")
+local AnotherHomeSection = Credits:CreateSection("Credits Stuff")
 
-local Paragraph = Credits:CreateParagraph({Title = "Project Valix", Content = "Project Valix 4.2 | Made by notvixinity™#5160"})
+local Paragraph = Credits:CreateParagraph({Title = "Project™", Content = "Project Valix / Project™ 4.2 | Made by notvixinity™#9999"})
 
 
 local Button = Credits:CreateButton({
@@ -233,7 +251,7 @@ local ShindoLoader = Credits:CreateButton({
 
       local AShindoSection = Shindo:CreateSection("Menu Stuff")
 
-      local Button = Shindo:CreateButton({
+      local ADonHubButton = Shindo:CreateButton({
          Name = "Don Hub",
          Callback = function()
             setclipboard("JFAKHSDJKASDHGAS")
@@ -349,80 +367,80 @@ local BloxfruitsLoader = Credits:CreateButton({
          Name = "Mukuro",
          Callback = function()
              
-             Rayfield:Notify({
-                 Title = "Project Valix",
-                 Content = "Currently Executing Mukuro",
-                 Duration = 6.5,
-                 Image = 0,
-                 Actions = { -- Notification Buttons
-                    Ignore = {
-                       Name = "Okay!",
-                       Callback = function()
-                       print("The user tapped Okay!")
-                    end
-                 },
-              },
-             })
+            Rayfield:Notify({
+               Title = "Project Valix",
+               Content = "Currently Executing Mukuro",
+               Duration = 6.5,
+               Image = 0,
+               Actions = { -- Notification Buttons
+                  Ignore = {
+                     Name = "Okay!",
+                     Callback = function()
+                     print("The user tapped Okay!")
+                  end
+               },
+            },
+            })
    
    
-             wait(1)
+            wait(1)
              
-             loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
          end,
-     })
+      })
      
      
      local Ripper = BloxF:CreateButton({
          Name = "Ripper Hub",
          Callback = function()
              
-             Rayfield:Notify({
-                 Title = "Project Valix",
-                 Content = "Currently Executing Ripper",
-                 Duration = 6.5,
-                 Image = 0,
-                 Actions = { -- Notification Buttons
-                    Ignore = {
-                       Name = "Okay!",
-                       Callback = function()
-                       print("The user tapped Okay!")
-                    end
-                 },
-              },
-             })
+            Rayfield:Notify({
+               Title = "Project Valix",
+               Content = "Currently Executing Ripper",
+               Duration = 6.5,
+               Image = 0,
+               Actions = { -- Notification Buttons
+                  Ignore = {
+                     Name = "Okay!",
+                     Callback = function()
+                     print("The user tapped Okay!")
+                  end
+               },
+            },
+            })
    
    
-             wait(1)
+            wait(1)
              
-             loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
          end,
-     })
+      })
    
      local HohoHub = BloxF:CreateButton({
          Name = "HoHo Hub",
          Callback = function()
              
-             Rayfield:Notify({
-                 Title = "Project Valix",
-                 Content = "Currently Executing Hoho Hub",
-                 Duration = 6.5,
-                 Image = 0,
-                 Actions = { -- Notification Buttons
-                    Ignore = {
-                       Name = "Okay!",
-                       Callback = function()
-                       print("The user tapped Okay!")
-                    end
-                 },
-              },
-             })
+            Rayfield:Notify({
+               Title = "Project Valix",
+               Content = "Currently Executing Hoho Hub",
+               Duration = 6.5,
+               Image = 0,
+               Actions = { -- Notification Buttons
+                  Ignore = {
+                     Name = "Okay!",
+                     Callback = function()
+                     print("The user tapped Okay!")
+                  end
+               },
+            },
+            })
    
    
-             wait(1)
+            wait(1)
              
-             loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
          end,
-     })
+      })
    
      local BloxFSection = BloxF:CreateSection("BloxFruits #2 Stuff")
    
@@ -431,82 +449,79 @@ local BloxfruitsLoader = Credits:CreateButton({
          Name = "Furk BloxFruits",
          Callback = function()
              
-             Rayfield:Notify({
-                 Title = "Project Valix",
-                 Content = "Currently Executing Furk Bloxfruits",
-                 Duration = 6.5,
-                 Image = 0,
-                 Actions = { -- Notification Buttons
-                    Ignore = {
-                       Name = "Okay!",
-                       Callback = function()
-                       print("The user tapped Okay!")
-                    end
-                 },
-              },
-             })
+            Rayfield:Notify({
+               Title = "Project Valix",
+               Content = "Started Loading Furk Bloxfruits",
+               Duration = 6.5,
+               Image = 0,
+               Actions = { -- Notification Buttons
+                  Ignore = {
+                     Name = "Okay!",
+                     Callback = function()
+                     print("The user tapped Okay!")
+                  end
+               },
+            },
+            })
    
-             wait(1)
+            wait(1)
              
-             loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf", true))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/bf", true))()
          end,
-     })
+      })
      
    
      local Mango = BloxF:CreateButton({
          Name = "Mango",
          Callback = function()
-             
-                         
-             Rayfield:Notify({
-                 Title = "Project Valix",
-                 Content = "Currently Executing Mango",
-                 Duration = 6.5,
-                 Image = 0,
-                 Actions = { -- Notification Buttons
-                    Ignore = {
-                       Name = "Okay!",
-                       Callback = function()
-                       print("The user tapped Okay!")
-                    end
-                 },
-              },
-             })
+                                
+            Rayfield:Notify({
+               Title = "Project Valix",
+               Content = "Loading Mango..",
+               Duration = 6.5,
+               Image = 0,
+               Actions = { -- Notification Buttons
+                  Ignore = {
+                     Name = "Okay!",
+                     Callback = function()
+                     print("The user tapped Okay!")
+                  end
+               },
+            },
+            })
    
-             wait(1)
+            wait(1)
              
              
-             getgenv().WaterMark = true
-             loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
+            getgenv().WaterMark = true
+            loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
          end,
      })
    
      local Vellerius = BloxF:CreateButton({
          Name = "Vellerius",
          Callback = function()
-             
-                         
-             Rayfield:Notify({
-                 Title = "Project Valix",
-                 Content = "Currently Executing Vellerius",
-                 Duration = 6.5,
-                 Image = 0,
-                 Actions = { -- Notification Buttons
-                    Ignore = {
-                       Name = "Okay!",
-                       Callback = function()
-                       print("The user tapped Okay!")
-                    end
-                 },
-              },
-             })
+                                 
+            Rayfield:Notify({
+               Title = "Project Valix",
+               Content = "Succesfully Started Loading Vellerius",
+               Duration = 6.5,
+               Image = 0,
+               Actions = { -- Notification Buttons
+                  Ignore = {
+                     Name = "Okay!",
+                     Callback = function()
+                     print("The user tapped Okay!")
+                  end
+               },
+            },
+            })
    
-             wait(1)
+            wait(1)
              
-             
-             loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Bloxfruit.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Bloxfruit.lua"))()
          end,
-     })
+      })
 
 
 
@@ -521,13 +536,13 @@ if game.PlaceId == 4620170611 then
    local Paragraph = BreakIn:CreateParagraph({Title = "Project Valix", Content = "Project Valix 4.2 | Break In"})
 
    -- Values
-   getgev().SelectedItemGiver = nil
-   getgev().ItemGiver = true
+   getgenv().SelectedItemGiver = nil
+   getgenv().ItemGiver = true
 
    -- Functions
    function ItemSelection()
-      while getgev().ItemGiver == true do
-         game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(getgev().SelectedItemGiver)
+      while getgenv().ItemGiver == true do
+         game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(getgenv().SelectedItemGiver)
          wait(.1)
       end
    end
@@ -541,7 +556,7 @@ if game.PlaceId == 4620170611 then
       CurrentOption = "Apple",
       Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
       Callback = function(Option)
-         getgev().SelectedItemGiver = Option
+         getgenv().SelectedItemGiver = Option
          print(Option)
       end,
    })
@@ -551,7 +566,7 @@ if game.PlaceId == 4620170611 then
       CurrentValue = false,
       Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
       Callback = function(Value)
-         getgev().ItemGiver = Value
+         getgenv().ItemGiver = Value
          ItemSelection()
       end,
    })
@@ -563,13 +578,13 @@ elseif game.PlaceId == 3851622790 then
    local Paragraph = BreakIn:CreateParagraph({Title = "Project Valix", Content = "Project Valix 4.2 | Break In"})
 
    -- Values
-   getgev().SelectedItemGiver = nil
-   getgev().ItemGiver = true
+   getgenv().SelectedItemGiver = nil
+   getgenv().ItemGiver = true
 
    -- Functions
    function ItemSelection()
-      while getgev().ItemGiver == true do
-         game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(getgev().SelectedItemGiver)
+      while getgenv().ItemGiver == true do
+         game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(getgenv().SelectedItemGiver)
          wait(.1)
       end
    end
@@ -583,7 +598,7 @@ elseif game.PlaceId == 3851622790 then
       CurrentOption = "Apple",
       Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
       Callback = function(Option)
-         getgev().SelectedItemGiver = Option
+         getgenv().SelectedItemGiver = Option
          print(Option)
       end,
    })
@@ -593,7 +608,7 @@ elseif game.PlaceId == 3851622790 then
       CurrentValue = false,
       Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
       Callback = function(Value)
-         getgev().ItemGiver = Value
+         getgenv().ItemGiver = Value
          ItemSelection()
       end,
    })
@@ -621,12 +636,12 @@ elseif game.PlaceId == 7449423635 then
                  end
               },
            },
-          })
+         })
 
 
-          wait(1)
+         wait(1)
           
-          loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+         loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
       end,
   })
   
@@ -648,12 +663,12 @@ elseif game.PlaceId == 7449423635 then
                  end
               },
            },
-          })
+         })
 
 
-          wait(1)
+         wait(1)
           
-          loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/xDestinyx/RipperHub/main/Loader.lua'))();
       end,
   })
 
@@ -1083,77 +1098,108 @@ elseif game.PlaceId == 2753915549 then
       Callback = function()
           
                       
-          Rayfield:Notify({
-              Title = "Project Valix",
-              Content = "Currently Executing Vellerius",
-              Duration = 6.5,
-              Image = 0,
-              Actions = { -- Notification Buttons
-                 Ignore = {
-                    Name = "Okay!",
-                    Callback = function()
-                    print("The user tapped Okay!")
-                 end
-              },
-           },
-          })
+         Rayfield:Notify({
+            Title = "Project Valix",
+            Content = "Currently Executing Vellerius",
+            Duration = 6.5,
+            Image = 0,
+            Actions = { -- Notification Buttons
+               Ignore = {
+                  Name = "Okay!",
+                  Callback = function()
+                  print("The user tapped Okay!")
+               end
+            },
+          },
+         })
 
-          wait(1)
+         wait(1)
           
           
           loadstring(game:HttpGet("https://raw.githubusercontent.com/Corrupt2625/pjv/main/Bloxfruit.lua"))()
       end,
   })
 
-elseif game.PlaceId == 8737602449 then
-   local PlsDonate = Window:CreateTab("plsdonate") -- Title, Image
-   local BreakInSection = PlsDonate:CreateSection("PlsDonate Stuff")
-   
-   local Paragraph = PlsDonate:CreateParagraph({Title = "Project Valix", Content = "Project Valix 4.2 | Pls Donate"})
 
-   -- Values
-   getgenv().plsbeg = true
-   getgenv().Selectedbeg = nil
-   getgenv().BegWait = nil
-   -- Functions
-   function autobeg()
-      while getgenv().plsbeg == true do
-         print('Current Beging Method is'..getgenv().Selectedbeg)
-         
-         wait(getgenv().BegWait)
-      end
+elseif game.PlaceId == 5665787539 then
+   local GGlory = Window:CreateTab("Gods Of Glory") -- Title, Image
+   local BreakInSection = GGlory:CreateSection("Gods Of Glory Stuff")
    
+   local Paragraph = GGlory:CreateParagraph({Title = "Project Valix", Content = "Project Valix 4.2 | Gods Of Glory"})
+
+
+
+   --Values
+   
+   getgenv().AutoRebirth = true
+
+   getgenv().ManaSelection = nil
+
+   getgenv().ManaThingi = nil
+
+   -- Functions
+
+   function arebirther()
+      while getgenv().AutoRebirth == true do
+         game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer({})
+         wait(0.10)
+      end
+      
    end
 
 
-   -- Dropdowns + Toggles
-   local Dropdown = PlsDonate:CreateDropdown({
-      Name = "Beg Message Selection",
-      Options = {"Pls Donate to me I'm so close to my goal!","I WONT STOP SPAMMING TILL SOMEONE DONATES TO ME!"},
-      CurrentOption = "Pls Donate to me I'm so close to my goal!",
+
+   local Dropdown = GGlory:CreateDropdown({
+      Name = "Mana Selection",
+      Options = {"100","1000","100000","1000000","10000000","100000000","1000000000"},
+      CurrentOption = {"100"},
+      MultipleOptions = false,
       Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
       Callback = function(Option)
-         getgenv().Selectedbeg = Option
-         print('Selected Beging Method is'..Option)
+         print(Option)
+         getgenv().ManaSelection = Option
       end,
    })
 
-
-   local DropdownS = PlsDonate:CreateDropdown({
-      Name = "Wait Selection",
-      Options = {".5","1","5","10","15","20","30","40","50"},
-      CurrentOption = "5",
-      Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-      Callback = function(Option)
-         getgenv().BegWait = Option
-         print('Beg Wait is Set To'..Option)
+   local Button = GGlory:CreateButton({
+      Name = "Give Mana",
+      Callback = function()
+            Rayfield:Notify({
+               Title = "Project Valix",
+               Content = "Giving User Selected Mana",
+               Duration = 6.5,
+               Image = 0,
+               Actions = { -- Notification Buttons
+                  Ignore = {
+                     Name = "Okay!",
+                     Callback = function()
+                     print("The user tapped Okay!")
+                  end
+               },
+            },
+            })
+   
+            wait(1)
+   
+            local args = {
+               [1] = {
+                  ["Value"] = (getgenv().ManaSelection)
+               }
+            }
+   
+            game:GetService("ReplicatedStorage").Remotes.GiveMana:FireServer(unpack(args))
       end,
    })
-
-
-
-
-
+   
+   local Toggle = GGlory:CreateToggle({
+      Name = "Auto-Rebirth",
+      CurrentValue = false,
+      Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+      Callback = function(Value)
+         arebirther()
+         getgenv().AutoRebirth = Value
+      end,
+   })
 
 
 
